@@ -3,19 +3,25 @@
 const shell = require('shelljs')
 
 const init = () => {
-  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/*', '.')
+  shell.mkdir('-f', '.app')
+
+  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/root/*', '.')
+  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/app/*', '.app')
 };
 
 const preview = () => {
-  shell.rm('-rf', 'node_modules/@yamat47/sample-blog-engine/src/posts')
-  shell.rm('-rf', 'node_modules/@yamat47/sample-blog-engine/src/public/images')
-  shell.rm('-f', 'node_modules/@yamat47/sample-blog-engine/src/config/application.ts')
+  shell.echo('Current working directory is:')
+  shell.echo(shell.pwd())
 
-  shell.cp('-rf', 'posts', 'node_modules/@yamat47/sample-blog-engine/src')
-  shell.cp('-rf', 'images', 'node_modules/@yamat47/sample-blog-engine/src/public')
-  shell.cp('-f', 'config.ts', 'node_modules/@yamat47/sample-blog-engine/src/config/application.ts')
+  shell.rm('-rf', '.app/posts')
+  shell.rm('-rf', '.app/public/images')
+  shell.rm('-f', '.app/config/application.ts')
 
-  shell.cd('node_modules/@yamat47/sample-blog-engine/src')
+  shell.cp('-rf', 'posts', '.app/src')
+  shell.cp('-rf', 'images', '.app/public')
+  shell.cp('-f', 'config.ts', '.app/config/application.ts')
+
+  shell.cd('.app')
 
   shell.echo('Install dependencies...')
   shell.exec('npm install')
