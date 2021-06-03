@@ -7,6 +7,9 @@ const init = () => {
 
   shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/root/.', '.')
   shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/app/.', '.app')
+
+  shell.touch('.gitignore')
+  shell.echo('.app').toEnd('.gitignore')
 };
 
 const preview = () => {
