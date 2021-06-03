@@ -1,6 +1,6 @@
 {
   "name": "@yamat47/sample-blog-engine",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Takuya Yamaguchi <yamat47.thirddown@gmail.com> (https://github.com/yamat47)",
   "license": "MIT",
   "bin": {
