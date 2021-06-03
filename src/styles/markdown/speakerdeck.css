@@ -1,0 +1,16 @@
+.markdown > iframe[src*="speakerdeck"] {
+  max-width: 100%;
+  margin: 0 auto 24px !important;
+}
+
+@media screen and (max-width:640px) {
+  .markdown > iframe[src*="speakerdeck"] {
+    height: 54vw;
+  }
+}
+
+@media screen and (min-width:641px) and (max-width:768px) {
+  .markdown > iframe[src*="speakerdeck"] {
+    height: 350px;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@yamat47/sample-blog-engine",
+  "version": "0.0.1",
+  "author": "Takuya Yamaguchi <yamat47.thirddown@gmail.com> (https://github.com/yamat47)",
+  "license": "MIT",
+  "bin": {
+    "sample-blog-engine": "bin/index.js"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.4"
+  }
+}
