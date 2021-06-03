@@ -3,19 +3,19 @@
 const shell = require('shelljs')
 
 const init = () => {
-  shell.cp('-rf', 'bin/init/template/*', '.')
+  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/*', '.')
 };
 
 const preview = () => {
-  shell.rm('-rf', 'src/posts')
-  shell.rm('-rf', 'src/public/images')
-  shell.rm('-f', 'src/config/application.ts')
+  shell.rm('-rf', 'node_modules/@yamat47/sample-blog-engine/src/posts')
+  shell.rm('-rf', 'node_modules/@yamat47/sample-blog-engine/src/public/images')
+  shell.rm('-f', 'node_modules/@yamat47/sample-blog-engine/src/config/application.ts')
 
-  shell.cp('-rf', 'posts', 'src')
-  shell.cp('-rf', 'images', 'src/public')
-  shell.cp('-f', 'config.ts', 'src/config/application.ts')
+  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/posts', 'node_modules/@yamat47/sample-blog-engine/src')
+  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/images', 'node_modules/@yamat47/sample-blog-engine/src/public')
+  shell.cp('-f', 'node_modules/@yamat47/sample-blog-engine/config.ts', 'node_modules/@yamat47/sample-blog-engine/src/config/application.ts')
 
-  shell.cd('src')
+  shell.cd('node_modules/@yamat47/sample-blog-engine/src')
 
   shell.echo('Install dependencies...')
   shell.exec('npm install')
