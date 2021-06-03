@@ -5,8 +5,8 @@ const shell = require('shelljs')
 const init = () => {
   shell.mkdir('.app')
 
-  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/root/*', '.')
-  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/app/*', '.app')
+  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/root/.', '.')
+  shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/app/.', '.app')
 };
 
 const preview = () => {
