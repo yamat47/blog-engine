@@ -8,14 +8,13 @@ const init = () => {
   shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/root/.', '.')
   shell.cp('-rf', 'node_modules/@yamat47/sample-blog-engine/bin/init/template/app/.', '.app')
 
+  const gitIgnore = new ShellString('.app')
   shell.touch('.gitignore')
-  shell.echo('.app').toEnd('.gitignore')
+  gitIgnore.toEnd('.gitignore')
 };
 
 const preview = () => {
-  shell.echo('Current working directory is:')
-  shell.echo(shell.pwd())
-
+  shell.echo('Set your posts...')
   shell.rm('-rf', '.app/posts')
   shell.rm('-rf', '.app/public/images')
   shell.rm('-f', '.app/config/application.ts')
