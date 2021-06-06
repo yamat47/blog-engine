@@ -18,11 +18,11 @@ const preview = () => {
   shell.echo('Set your posts...')
   shell.rm('-rf', '.app/posts')
   shell.rm('-rf', '.app/public/images')
-  shell.rm('-f', '.app/config/application.ts')
+  shell.rm('-f', '.app/config/application.yml')
 
   shell.cp('-rf', 'posts', '.app')
   shell.cp('-rf', 'images', '.app/public')
-  shell.cp('-f', 'config.ts', '.app/config/application.ts')
+  shell.cp('-f', 'config.yml', '.app/config/application.yml')
 
   shell.cd('.app')
 
