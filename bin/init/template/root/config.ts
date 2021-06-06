@@ -25,10 +25,10 @@ type ApplicationConfig = {
 
 export const applicationConfig: ApplicationConfig = {
   // Blog title.
-  title: 'My awesome blog.',
+  // title: 'My awesome blog.',
 
   // Blog description using for opengraph information and RSS feed.
-  description: 'This is my awesome blog.',
+  // description: 'This is my awesome blog.',
 
   header: {
     // File name of header image.

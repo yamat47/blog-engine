@@ -13,7 +13,8 @@ This posts' content (`/posts/thumbnail-system.md`) contains thumbnail informatio
 
 then `/images/thumbnails/thumbnail-system.jpg` is set as this post's thumbnail image.
 
-Otherwise, if `thumbnail` is not specified at post's metadata section `/images/ogp.png` is used for thumbnail.
+Otherwise, if `thumbnail` is not specified at post's metadata section `/images/thumbnails/thumbnail.png` is used for thumbnail.
+You can edit default thumbnail image file name on `config.ts`.
 
 ## Where is the thumbnail image used ?
 Thumbnail is used at three places.

@@ -14,7 +14,7 @@ export const defaultConfig: DefaultConfig = {
   description: 'This is my awesome blog.',
   postsPath: '/posts',
   defaultThumbnailFileName: 'thumbnail.png',
-  rootOpenGraphImageFileName: 'ogp.png',
+  rootOpenGraphImageFileName: 'thumbnail.png',
   rss: {
     imageFileName: 'rss.png',
   },
