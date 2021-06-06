@@ -23,6 +23,6 @@ type ApplicationConfig = {
   googleAnalyticsId?: string;
 };
 
-import config from './application.yml';
+const config = require('./application.yml');
 
 export const applicationConfig: ApplicationConfig = config;
